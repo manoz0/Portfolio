@@ -1,0 +1,191 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff8f0;
+}
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background:#2d0d32;
+    color: #e5e7eb;
+    line-height: 1.6;
+}
+/* ================= NAVBAR ================= */
+.nav_section {
+    position: relative;
+    width: 100%;
+    top: 0;
+    background: #f87503;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 26px;
+    color: #f47506;
+}
+
+.titles a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #e5e7eb;
+    font-weight: 600;
+    position: relative;
+}
+
+.titles a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background:  #100f0d;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
+
+.titles a:hover::after {
+    width: 100%;
+}
+
+#nav_line {
+    display: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Header */
+header {
+    background-color: #0c0c0c;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-family: Arial;
+}
+
+/* Navigation */
+nav {
+    background: #080808;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: rgb(6, 6, 6);
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://images.unsplash.com/photo-1550547660-d9450f859349') no-repeat center center/cover;
+    height: 300px;
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+}
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.hero h1 {
+    font-size: 40px;
+}
+
+/* Menu Section */
+.menu {
+    padding: 30px;
+    text-align: center;
+}
+
+.menu h2 {
+    color: #0c0c0c;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.item {
+    background: white;
+    margin: 15px;
+    padding: 20px;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #ccc;
+}
+
+button {
+    background: #0a0a0a;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #090909;
+}
+
+/* Footer */
+footer {
+    background: #070707;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    85% {
+        opacity: 0.8;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

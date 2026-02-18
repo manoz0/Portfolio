@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YOUR CHOICE CAFE</title>
+<link rel="stylesheet" href="./yc.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css" integrity="sha512-2bBQCjcnw658Lho4nlXJcc6WkV/UxpE/sAokbXPxQNGqmNdQrWqtw26Ns9kFF/yG792pKR1Sx8/Y1Lf1XN4GKA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.min.js" integrity="sha512-nKXmKvJyiGQy343jatQlzDprflyB5c+tKCzGP3Uq67v+lmzfnZUi/ZT+fc6ITZfSC5HhaBKUIvr/nTLCV+7F+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+</head>
+<body>
+<header>
+    <h1>   YOUR CHOICE CAFE </h1>
+    <p>Fresh Juice | Hot spicy | Tasty Snacks</p>
+</header>
+<section class="nav_section">
+        <div class="navbar">
+            <i class="fa-solid fa-code logo"></i>
+            <i class="fa-solid fa-bars" id="nav_line"></i>
+           
+            <div class="titles">
+                <a href="#">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#">Contact</a>
+                <a href="#">Review</a>
+            </div>
+        </div>
+    </section>
+
+<section class="hero">
+     <h1><u>Welcome to Our Cafe</u></h1>
+    <p>Delicious food made with love ❤️</p>
+</section>
+
+<section class="menu" id="menu">
+    <h2>Our Special Menu</h2>
+    <div class="menu-items">
+        <div class="item">
+            <h3>Classic Burger </h3>
+            <br>🍔</br>
+            <p>₹120</p>
+            <button onclick="order('Classic Burger')">Order</button>
+        </div>
+
+        <div class="item">
+            <h3>Cheese Burger</h3>
+            <p>₹150</p>
+            <button onclick="order('Cheese Burger')">Order</button>
+        </div>
+
+        <div class="item">
+            <h3>Cold Coffee</h3>
+            <p>₹90</p>
+            <button onclick="order('Cold Coffee')">Order</button>
+        </div>
+
+        <div class="item">
+            <h3>French Fries</h3>
+            <p>₹80</p>
+            <button onclick="order('French Fries')">Order</button>
+        </div>
+    </div>
+</section>
+<section id="order">
+    <h2>Place Order</h2>
+    <form id="orderForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="text" id="item" placeholder="Item Name" required>
+        <input type="number" id="quantity" placeholder="Quantity" required>
+        <button type="submit">Order Now</button>
+    </form>
+    <p id="orderMessage"></p>
+</section>
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+        <input type="text" id="contactName" placeholder="Your Name" required>
+        <input type="email" id="email">
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+    <p id="contactMessage"></p>
+</section>
+
+<footer>
+    <p>📍 SIVAGANGA | 📞 9363439309</p>
+    <p>© 2026 YOUR CHOICE CAFE </p>
+</footer>
+
+<script>
+function order(item) {
+    alert("Thank you for ordering " + item + " 😊");
+}
+</script>
+
+</body>
+</html>
