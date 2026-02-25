@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 html {
@@ -11,16 +10,18 @@ html {
 }
 
 body {
-    background:#2d0d32;
+    background: #0b0453;
     color: #e5e7eb;
     line-height: 1.6;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
 /* ================= NAVBAR ================= */
 .nav_section {
-    position: relative;
-    width: 100%;
+    position: fixed;
     top: 0;
-    background: #220527;
+    width: 100%;
+    background: #06011d;
     z-index: 1000;
 }
 
@@ -33,9 +34,11 @@ body {
     justify-content: space-between;
 }
 
+
 .logo {
     font-size: 26px;
-    color: #ae53ba;
+    color: #e6e4f0;
+    font-weight: bold;
 }
 
 .titles a {
@@ -50,7 +53,7 @@ body {
     content: "";
     width: 0;
     height: 2px;
-    background:  #ae53ba;
+    background: #23155f;
     position: absolute;
     bottom: -5px;
     left: 0;
@@ -65,10 +68,21 @@ body {
     display: none;
     font-size: 22px;
     cursor: pointer;
+    color: #1a055e;
 }
+
+/* Add spacing because navbar is fixed */
+body {
+    padding-top: 70px;
+}
+
 /* ================= HOME ================= */
 #home_section {
-    padding-top: 120px;
+    background-image: url('./images/li\ pic.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+     height:1800px; 
 }
 
 .home {
@@ -79,55 +93,38 @@ body {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 40px;
+    text-align: right;
 }
 
 .home img {
     width: 280px;
+    margin: auto;
     border-radius: 50%;
-    box-shadow: 0 0 25px  #ae53ba;
+    box-shadow: 0 0 25px #ae53ba;
     animation: float 3s ease-in-out infinite;
-    align-items: center;
 }
 
 @keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
-.right h3 {
-    animation: slideUp 2s ease-out;
-}
-
-.right h1 {
-    animation: slideUp 2.1s ease-out;
-}
-
-.right h4 {
-    animation: slideUp 2.1s ease-out;
-}
-
-.right_icon {
-    animation: slideUp 2.7s ease-out;
-}
-
-.resume {
-    animation: slideUp 3s ease-out;
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }
 
 .right h1 {
     font-size: 40px;
     margin: 10px 0;
+    animation: slideUp 2s ease-out;
+}
+
+.right h3,
+.right h4,
+.right_icon,
+.resume,
+.ATS {
+    animation: slideUp 2.5s ease-out;
 }
 
 .right h4 {
-    color:  #cf9cd6;
+    color: #cf9cd6;
 }
 
 @keyframes slideUp {
@@ -135,19 +132,9 @@ body {
         opacity: 0;
         transform: translateY(100px);
     }
-
-    50% {
-        opacity: 0.3;
-    }
-
-    85% {
-        opacity: 0.8;
-        transform: translateY(-10px);
-    }
-
     100% {
         opacity: 1;
-        transform: translateY(0px);
+        transform: translateY(0);
     }
 }
 
@@ -155,31 +142,30 @@ body {
     font-size: 26px;
     margin-right: 15px;
     color: #e5e7eb;
+    transition: 0.3s;
 }
 
 .right_icon a:hover {
-    color:  #ae53ba;
+    color: #ae53ba;
 }
 
-.resume {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 26px;
-    border-radius: 25px;
-    background:  #ae53ba;
-    color: #2d0d32;
-    text-decoration: none;
-    font-weight: 600;
-}
+/* Buttons */
+.resume,
 .ATS {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 26px;
     border-radius: 25px;
-    background:  #ae53ba;
-    color: #2d0d32;
+    background: #ece8ec;
     text-decoration: none;
     font-weight: 600;
+    transition: 0.3s;
+}
+
+.resume:hover,
+.ATS:hover {
+    background: #271f62;
+    transform: translateY(-3px);
 }
 
 /* ================= ABOUT ================= */
@@ -216,7 +202,7 @@ body {
 
 .Skill_box:hover {
     transform: translateY(-8px);
-    box-shadow: 0 0 18px  #ae53ba;
+    box-shadow: 0 0 18px #ae53ba;
 }
 
 .Skill_box i {
@@ -231,6 +217,7 @@ body {
 .Skill_box h2 {
     margin-top: 15px;
 }
+
 /* ================= EDUCATION ================= */
 #education_section {
     padding: 80px 20px;
@@ -254,14 +241,15 @@ body {
 
 .edu_card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 0 16px #823a84;
+    box-shadow: 0 0 16px #5915ea;
 }
 
 .edu_card i {
     font-size: 40px;
-    color: #df38f8;
+    color: #270a87;
     margin-bottom: 10px;
 }
+
 /* ================= CONTACT ================= */
 #footer_section {
     background: #2d0d32;
@@ -293,7 +281,7 @@ body {
     border-radius: 6px;
     border: none;
     outline: none;
-    background: #2d0d32;
+    background: #220527;
     color: #df38f8;
 }
 
@@ -306,7 +294,7 @@ body {
     margin-top: 10px;
     padding: 10px;
     background: #df38f8;
-    color:  #2d0d32 ;
+    color: #2d0d32;
     border: none;
     border-radius: 6px;
     font-weight: 600;
@@ -315,7 +303,8 @@ body {
 }
 
 .contact_form button:hover {
-    background: #df38f8;
+    background: #1f1560;
+    transform: translateY(-2px);
 }
 
 .contact_details p {
@@ -326,16 +315,16 @@ body {
 .footer_icons a {
     font-size: 24px;
     margin: 0 10px;
-    color: #df38f8;
+    color: #140f94;
+    transition: 0.3s;
 }
 
 .footer_icons a:hover {
-    color: #df38f8;
+    color: #c66bd1;
 }
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
-
     .home {
         grid-template-columns: 1fr;
         text-align: center;
@@ -347,7 +336,5 @@ body {
 
     #nav_line {
         display: block;
-        color: #df38f8;
-
     }
 }
