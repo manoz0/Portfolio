@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>my portfolio</title>
-    <link rel="stylesheet" href="./my portfolio.css">
+    <link rel="stylesheet" href="./index.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css" integrity="sha512-2bBQCjcnw658Lho4nlXJcc6WkV/UxpE/sAokbXPxQNGqmNdQrWqtw26Ns9kFF/yG792pKR1Sx8/Y1Lf1XN4GKA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.min.js" integrity="sha512-nKXmKvJyiGQy343jatQlzDprflyB5c+tKCzGP3Uq67v+lmzfnZUi/ZT+fc6ITZfSC5HhaBKUIvr/nTLCV+7F+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-</head>
+   
+    </head>
 <body>
         <!-- ================= NAVBAR ================= -->
-    <section class="nav_section">
-        <div class="navbar">
-            <!-- <i class="fa-solid fa-code logo"></i> -->
-            <i class="fa-solid fa-bars" id="nav_line"></i>
 
+        <div class="navbar">
+            
+            <!-- <i class="fa-solid fa-code logo"></i> -->
+             <h1><i class="fa-solid fa-graduation-cap"></i> &ThickSpace;PortFolio</h1>
+            <div class="bar"><button id="barclick"><i class="fa-solid fa-bars" id="nav_line"></i></button></div>
+            
             <div class="titles">
                 <a href="#home_section">HOME</a>
                 <a href="#about_section">ABOUT</a>
@@ -25,33 +28,36 @@
                 <a href="#footer_section">CONTACT</a>
             </div>
         </div>
-    </section>
+
     <!-- ================= HOME ================= -->
     <section id="home_section">
         <div class="home">
             <div class="left">
-                <!-- <img src="./images/my .jpg" alt="Profile Image"> -->
-            </div>
-
-            <div class="right">
-                <h3>Hello, I'm</h3>
+                 <!-- <h3>Hello, I'm</h3> -->
                 <h1>velmanokar s</h1>
-                <h4>SOFTWARE DEVELOPER</h4>
-
-                <div class="right_icon">
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#"><i class="fa-brands fa-github"></i></a>
-                </div>
-
-                <a class="resume" href="VELMANOKAR CV.pdf" download>Download Resume </a>
-                               
-
+                <h4>SOFTWARE DEVELOPER</h4>                
             </div>
         </div>
+        
     </section>
+    
     <!-- ================= ABOUT ================= -->
     <section id="about_section">
         <div class="about">
+            <div class="right">
+                <div class="right_icon">
+                    <a href=""><i class="fa-etch fa-solid fa-share-nodes"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                </div>
+
+                <a class="resume" href="VELMANOKAR CV.pdf" download>Download Resume </a>                                        
+
+            </div>
+            <br>
+            <div class="b_about">
             <p>
                 I am a BE. ELECTRICAL AND ELECTRANICS ENGINEERING currently pursuing a PYTHON FULL STACK Developer course.
 
@@ -61,7 +67,7 @@
 
                 I am seeking an entry-level opportunity where I can apply my technical knowledge, learn from experienced
                 professionals, and grow as a software developer.
-            </p>
+            </p></div>
         </div>
     </section>
     <!-- ================= SKILLS ================= -->
@@ -82,13 +88,13 @@
             <div class="Skill_box"><i class="fa-brands fa-react"></i>
                 <h2>React</h2>
             </div>
-            <div class="Skill_box"><img src="./images/python-logo.png">
+            <div class="Skill_box"><i class="fa-brands fa-python"></i>
                 <h2>Python</h2>
             </div>
-            <div class="Skill_box"><img src="./images/djang.png">
+            <div class="Skill_box"><i class="fa-brands fa-connectdevelop"></i>
                 <h2>Django</h2>
             </div>
-            <div class="Skill_box"><img src="./images/mysql.jpg">
+            <div class="Skill_box"><i class="fa-sharp fa-solid fa-database"></i>
                 <h2>MySQL</h2>
             </div>
         </div>
@@ -97,13 +103,13 @@
     <section id="education_section">
         <div class="education">
             <div class="edu_card">
-                <i class="fa-solid fa-school"></i>
+                <i class="fa-sharp-duotone fa-solid fa-school-flag"></i>
                 <h3>HSC</h3>
                 <p>21st century higher Secondary school</p>
             </div>
 
             <div class="edu_card">
-                <i class="fa-solid fa-graduation-cap"></i>
+                <i class="fa-duotone fa-solid fa-graduation-cap"></i>
                 <h3>BE - EEE</h3>
                 <p>TKS College Of Technology</p>
             </div>
@@ -111,7 +117,7 @@
     </section>
     <!-- ================= CONTACT ================= -->
     <section id="footer_section">
-        <footer class="footer">
+        <footer class="footer" id="footer_section">
 
             <h2>Contact</h2>
             <p>Feel free to reach out for job opportunities or collaborations.</p>
@@ -120,38 +126,35 @@
             <form class="contact_form">
 
                 <label>Full Name</label>
-                <input type="text" placeholder="Enter your name" required>
+                <input type="text" placeholder="your Good name" required>
 
                 <label>Email Address</label>
                 <input type="email" placeholder="Enter your email" required>
 
                 <label>Message</label>
-                <textarea rows="4" placeholder="Write your message" required></textarea>
+                <textarea rows="4" placeholder="Write your review" required></textarea>
 
-                <button type="submit">Send Message</button>
+                <button type="submit">SubmiT</button>
 
             </form>
-
+         </footer>
+         <div id="footer_section">
             <div class="contact_details">
                 <p>Email: manoz.q3@gmail.com</p>
                 <p>Phone: +91 9363439309</p>
-                <p>Location: Tamil Nadu, India</p>
-            </div>
-
-            <div class="footer_icons">
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <p><i class="fa-solid fa-location-dot" id="about_section"></i> &ThickSpace;Chennai,Tamil Nadu</p>
             </div>
 
             <p>© 2026 ManO</p>
-
-        </footer>
+            </div>
     </section>
+    <script>
+const menuBtn = document.getElementById("nav_line");
+const menu = document.querySelector(".bar");
 
-
-
-
-    </div>
-    
+menuBtn.addEventListener("click", () => {
+    menu.classList.toggle("active");
+});
+</script>
 </body>
 </html>
