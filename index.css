@@ -40,11 +40,9 @@ body{
     position:fixed;
     width:100%;
     top:0;
-    /* background:rgba(0,0,0,0.7); */
     background-color: #111010;
     backdrop-filter:blur(1px);
     z-index:7000;
-    /* width: 100%; */
     height: 70px;
     margin:auto;
     padding:18px 10px;
@@ -53,7 +51,7 @@ body{
     align-items:center;
     color: #f4f4f4;
 }
-.bar{
+.bar{ 
     display: none;
 }
 
@@ -83,6 +81,49 @@ body{
 
 .titles a:hover::after{
     width:100%;
+} */
+ .bar{
+    display:none;
+}
+
+#barclick{
+    background:none;
+    border:none;
+    color:white;
+    font-size:24px;
+}
+
+@media(max-width:768px){
+
+.navbar{
+    flex-direction:row;
+}
+
+.bar{
+    display:block;
+}
+
+.titles{
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:#111;
+    display:none;
+    flex-direction:column;
+    text-align:center;
+}
+
+.titles a{
+    padding:15px;
+    display:block;
+    border-bottom:1px solid #222;
+}
+
+.titles.active{
+    display:flex;
+}
+
 }
 
 /* ================= HOME SECTION ================= */
@@ -98,6 +139,17 @@ body{
     padding-left:8%;
     position:relative;
     font-family:Georgia, 'Times New Roman', Times, serif
+}
+@media(max-width:768px){
+
+#home_section{
+background-position:right;
+}
+
+.left{
+padding-top:140px;
+}
+
 }
 
 /* Animated background particles */
@@ -228,10 +280,13 @@ section{
     }
 .skills{
     text-align: center;
-    color:#f4f4f4
+    color:#f4f4f4;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:25px;
+    margin-top:40px;
 
     }
-
 .Skill_box:hover{
     transform:translateY(-12px);
     box-shadow:0 0 30px var(--primary);
@@ -251,6 +306,10 @@ section{
 .education{
     text-align: center;
     color: #fff;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    margin-top:40px;
 }
 
 .edu_card:hover{
@@ -272,6 +331,7 @@ section{
     background:#1a1a1a;
     border:1px solid #a1510b;
     color:#fff;
+    width:100%;
 }
 
 .contact_form input:focus,
